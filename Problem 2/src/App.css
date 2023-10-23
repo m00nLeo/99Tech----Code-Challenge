@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  animation: color 9s infinite linear;
+  font-family: "Exo", "Poppins", "Roboto", sans-serif;
+}
+
+@keyframes color {
+  0% {
+    background: #0d6695;
+  }
+  20% {
+    background: #a41d94;
+  }
+  40% {
+    background: #7d9002;
+  }
+  60% {
+    background: #14843d;
+  }
+  80% {
+    background: #90391c;
+  }
+  100% {
+    background: #0d6695;
+  }
+}
+
+.currency-form {
+  margin: 0 auto;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  background: linear-gradient(to top, rgb(234, 219, 203), rgb(237, 235, 235));
+  border: 2px solid rgb(247, 222, 222);
+  border-radius: 3rem;
+  box-shadow: 0 4px 80px 10px rgba(205, 205, 205, 0.2),
+    0 10px 30px 0 rgba(209, 208, 208, 0.19);
+}
+
+.currency-form h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.choose-currency {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.numberCurrency,
+.sourceCurrency,
+.targetCurrency {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.numberCurrency {
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+form input,
+select {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  /* width: fit-content; */
+}
+
+.swap-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.swap-btn:hover {
+  color: #b85b56;
+}
+
+.submit {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.submit-btn {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #b85b56;
+  border: 2px solid #84495f;
+  color: #feb837;
+}
+
+#result {
+  font-weight: 700;
+  color: #b85b56;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#imgg {
+  background-color: inherit;
+}
+
+@media (max-width: 1024px) {
+  form {
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  form {
+    font-size: 18px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .currency-form h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}

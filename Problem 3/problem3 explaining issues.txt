@@ -1,0 +1,19 @@
+A list of the computational inefficiencies and anti-patterns:
+- getPriority() function: This function creates a switch statement to check the value of the blockchain parameter and return a priority value. I think this is an inefficient way to implement this logic, as it requires a lot of comparisons to be made. For me, a more efficient approach would be to use a lookup table to map the blockchain values to their priority values
+
+- sortedBalances memo: The sortedBalances memo sorts the balances based on their priority and amount. This sorting operation is kind of unnecessary, as the balances are already sorted by priority in the getPriority() function.
+
+- formattedBalances array: The formattedBalances array is created by mapping over the sortedBalances array and adding a formatted property to each balance. This property contains the balance's amount formatted as a string. This formatting operation could be delayed until the balances are rendered in the rows array. This would avoid formatting balances that are never displayed to the user.
+
+- rows array: The rows array is created by mapping over the sortedBalances array and rendering a WalletRow component for each balance. This mapping operation is unnecessary, as the WalletRow components could be rendered directly from the sortedBalances array.
+
+
+Here are some of my suggestions for improving the code:
+
+- getPriority() function: Replace the switch statement with a lookup table to map the blockchain values to their priority values.
+
+- sortedBalances memo: Remove the sorting operation, as the balances are already sorted by priority in the getPriority() function.
+
+- formattedBalances array: Delay the formatting of the balances until they are rendered in the rows array.
+
+- rows array: Render the WalletRow components directly from the sortedBalances array.
